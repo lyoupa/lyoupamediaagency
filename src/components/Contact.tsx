@@ -42,18 +42,18 @@ const Contact = () => {
           <Card className="shadow-card">
             <CardContent className="p-6 text-center">
               <h4 className="font-semibold mb-4">Follow Us</h4>
-              <div className="flex justify-center space-x-4">
-                <Button variant="ghost" size="icon">
-                  <Facebook className="h-5 w-5" />
+              <div className="grid grid-cols-2 gap-3 max-w-32 mx-auto">
+                <Button variant="ghost" size="lg" className="h-12 w-12">
+                  <Facebook className="h-6 w-6" />
                 </Button>
-                <Button variant="ghost" size="icon">
-                  <Twitter className="h-5 w-5" />
+                <Button variant="ghost" size="lg" className="h-12 w-12">
+                  <Twitter className="h-6 w-6" />
                 </Button>
-                <Button variant="ghost" size="icon">
-                  <Instagram className="h-5 w-5" />
+                <Button variant="ghost" size="lg" className="h-12 w-12">
+                  <Instagram className="h-6 w-6" />
                 </Button>
-                <Button variant="ghost" size="icon">
-                  <Linkedin className="h-5 w-5" />
+                <Button variant="ghost" size="lg" className="h-12 w-12">
+                  <Linkedin className="h-6 w-6" />
                 </Button>
               </div>
             </CardContent>
