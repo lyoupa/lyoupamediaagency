@@ -3,7 +3,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: 'calc(100vh - 20px)' }}>
       {/* Background Gradient */}
       <div className="absolute inset-0 gradient-hero opacity-90"></div>
       

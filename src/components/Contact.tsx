@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageCircle, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 const Contact = () => {
@@ -17,67 +15,49 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <Card className="lg:col-span-2 shadow-card">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold mb-6">Send us a message</h3>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input placeholder="Your Name" />
-                  <Input placeholder="Your Email" type="email" />
-                </div>
-                <Input placeholder="Subject" />
-                <Textarea placeholder="Your Message" rows={5} />
-                <Button className="w-full">Send Message</Button>
-              </form>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          {/* Contact Info */}
+          <Card className="shadow-card">
+            <CardContent className="p-6 text-center">
+              <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h4 className="font-semibold mb-2">Email Us</h4>
+              <p className="text-muted-foreground">contact@lyoupamedia.com</p>
+              <Button variant="outline" className="mt-4 w-full">
+                Send Email
+              </Button>
             </CardContent>
           </Card>
 
-          {/* Contact Info */}
-          <div className="space-y-6">
-            <Card className="shadow-card">
-              <CardContent className="p-6 text-center">
-                <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Email Us</h4>
-                <p className="text-muted-foreground">contact@lyoupamedia.com</p>
-                <Button variant="outline" className="mt-4 w-full">
-                  Send Email
-                </Button>
-              </CardContent>
-            </Card>
+          <Card className="shadow-card">
+            <CardContent className="p-6 text-center">
+              <MessageCircle className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h4 className="font-semibold mb-2">WhatsApp</h4>
+              <p className="text-muted-foreground">+1 (555) 123-4567</p>
+              <Button variant="outline" className="mt-4 w-full">
+                Chat on WhatsApp
+              </Button>
+            </CardContent>
+          </Card>
 
-            <Card className="shadow-card">
-              <CardContent className="p-6 text-center">
-                <MessageCircle className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">WhatsApp</h4>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                <Button variant="outline" className="mt-4 w-full">
-                  Chat on WhatsApp
+          <Card className="shadow-card">
+            <CardContent className="p-6 text-center">
+              <h4 className="font-semibold mb-4">Follow Us</h4>
+              <div className="flex justify-center space-x-4">
+                <Button variant="ghost" size="icon">
+                  <Facebook className="h-5 w-5" />
                 </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-card">
-              <CardContent className="p-6 text-center">
-                <h4 className="font-semibold mb-4">Follow Us</h4>
-                <div className="flex justify-center space-x-4">
-                  <Button variant="ghost" size="icon">
-                    <Facebook className="h-5 w-5" />
-                  </Button>
-                  <Button variant="ghost" size="icon">
-                    <Twitter className="h-5 w-5" />
-                  </Button>
-                  <Button variant="ghost" size="icon">
-                    <Instagram className="h-5 w-5" />
-                  </Button>
-                  <Button variant="ghost" size="icon">
-                    <Linkedin className="h-5 w-5" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                <Button variant="ghost" size="icon">
+                  <Twitter className="h-5 w-5" />
+                </Button>
+                <Button variant="ghost" size="icon">
+                  <Instagram className="h-5 w-5" />
+                </Button>
+                <Button variant="ghost" size="icon">
+                  <Linkedin className="h-5 w-5" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
