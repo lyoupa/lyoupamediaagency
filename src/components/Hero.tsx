@@ -33,7 +33,12 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
-            <Button size="lg" variant="secondary" className="min-w-[200px]">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="min-w-[200px]"
+              onClick={() => window.open('https://wa.me/1234567890?text=Hi! I would like to get started with your services.', '_blank')}
+            >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
