@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowRight, Play } from "lucide-react";
+import { useState } from "react";
 
 const Hero = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <section id="home" className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: 'calc(100vh - 40px)' }}>
       {/* Background Gradient */}
@@ -33,10 +37,25 @@ const Hero = () => {
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="min-w-[200px] bg-white/10 border-white/30 text-white hover:bg-white/20">
-              <Play className="mr-2 h-5 w-5" />
-              Watch Demo
-            </Button>
+            <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+              <DialogTrigger asChild>
+                <Button size="lg" variant="outline" className="min-w-[200px] bg-white/10 border-white/30 text-white hover:bg-white/20">
+                  <Play className="mr-2 h-5 w-5" />
+                  Watch Demo
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-0">
+                <div className="relative w-full aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                    title="Demo Video"
+                    className="w-full h-full rounded-lg"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
