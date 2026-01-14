@@ -1,17 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "About", href: "#about" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Contact", href: "#contact" },
+    { name: t('nav.home'), href: "#home" },
+    { name: t('nav.services'), href: "#services" },
+    { name: t('nav.portfolio'), href: "#portfolio" },
+    { name: t('nav.about'), href: "#about" },
+    { name: t('nav.pricing'), href: "#pricing" },
+    { name: t('nav.contact'), href: "#contact" },
   ];
 
   return (
@@ -28,7 +31,7 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <a
-                key={item.name}
+                key={item.href}
                 href={item.href}
                 className="text-foreground hover:text-primary transition-colors duration-200"
               >
@@ -37,14 +40,16 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex">
+          <div className="hidden md:flex items-center gap-2">
+            <LanguageSwitcher />
             <Button variant="default" size="sm">
-              Get Started
+              {t('nav.getStarted')}
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitcher />
             <Button
               variant="ghost"
               size="sm"
@@ -61,7 +66,7 @@ const Header = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-border">
               {navItems.map((item) => (
                 <a
-                  key={item.name}
+                  key={item.href}
                   href={item.href}
                   className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
@@ -71,7 +76,7 @@ const Header = () => {
               ))}
               <div className="px-3 py-2">
                 <Button variant="default" size="sm" className="w-full">
-                  Get Started
+                  {t('nav.getStarted')}
                 </Button>
               </div>
             </div>

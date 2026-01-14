@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowRight, Play } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const { t, isRTL } = useLanguage();
 
   return (
     <section id="home" className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: 'calc(100vh - 40px)' }}>
@@ -21,15 +23,14 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in">
-            Digital Excellence
+            {t('hero.title1')}
             <span className="block bg-gradient-to-r from-white to-primary-glow bg-clip-text text-transparent">
-              Starts Here
+              {t('hero.title2')}
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto animate-slide-up">
-            We transform ideas into digital reality. From stunning websites to powerful mobile apps, 
-            we deliver cutting-edge solutions that drive your business forward.
+            {t('hero.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
@@ -37,16 +38,16 @@ const Hero = () => {
               size="lg" 
               variant="secondary" 
               className="min-w-[200px]"
-              onClick={() => window.open('https://wa.me/1234567890?text=Hi! I would like to get started with your services.', '_blank')}
+              onClick={() => window.open(`https://wa.me/1234567890?text=${encodeURIComponent(t('hero.whatsappMessage'))}`, '_blank')}
             >
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
+              {t('hero.getStarted')}
+              <ArrowRight className={`h-5 w-5 ${isRTL ? 'mr-2 rotate-180' : 'ml-2'}`} />
             </Button>
             <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
               <DialogTrigger asChild>
                 <Button size="lg" variant="outline" className="min-w-[200px] bg-white/10 border-white/30 text-white hover:bg-white/20">
-                  <Play className="mr-2 h-5 w-5" />
-                  Watch Demo
+                  <Play className={`h-5 w-5 ${isRTL ? 'ml-2' : 'mr-2'}`} />
+                  {t('hero.watchDemo')}
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-0">
@@ -66,15 +67,15 @@ const Hero = () => {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
             <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>
               <div className="text-3xl font-bold mb-2">50+</div>
-              <div className="text-white/80">Projects Completed</div>
+              <div className="text-white/80">{t('hero.projectsCompleted')}</div>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: '0.7s' }}>
               <div className="text-3xl font-bold mb-2">5+</div>
-              <div className="text-white/80">Years Experience</div>
+              <div className="text-white/80">{t('hero.yearsExperience')}</div>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: '0.9s' }}>
               <div className="text-3xl font-bold mb-2">100%</div>
-              <div className="text-white/80">Client Satisfaction</div>
+              <div className="text-white/80">{t('hero.clientSatisfaction')}</div>
             </div>
           </div>
         </div>
