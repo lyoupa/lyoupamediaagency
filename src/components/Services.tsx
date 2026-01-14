@@ -1,37 +1,40 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Globe, Code, Smartphone, Users, Settings, TrendingUp } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: Globe,
-      title: "Web Design",
-      description: "Modern, responsive websites that captivate your audience and drive conversions."
+      titleKey: "services.webDesign",
+      descKey: "services.webDesignDesc"
     },
     {
       icon: Code,
-      title: "Web Development",
-      description: "Custom web applications built with cutting-edge technologies and best practices."
+      titleKey: "services.webDev",
+      descKey: "services.webDevDesc"
     },
     {
       icon: Smartphone,
-      title: "Android Apps",
-      description: "Native mobile applications that deliver exceptional user experiences on Android."
+      titleKey: "services.androidApps",
+      descKey: "services.androidAppsDesc"
     },
     {
       icon: Users,
-      title: "Community Manager",
-      description: "Strategic social media management to build and engage your online community."
+      titleKey: "services.communityManager",
+      descKey: "services.communityManagerDesc"
     },
     {
       icon: Settings,
-      title: "CMS Solutions",
-      description: "User-friendly content management systems for easy website administration."
+      titleKey: "services.cmsSolutions",
+      descKey: "services.cmsSolutionsDesc"
     },
     {
       icon: TrendingUp,
-      title: "Digital Marketing",
-      description: "Data-driven marketing strategies to boost your online presence and ROI."
+      titleKey: "services.digitalMarketing",
+      descKey: "services.digitalMarketingDesc"
     }
   ];
 
@@ -40,10 +43,10 @@ const Services = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Our <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Services</span>
+            {t('services.title')} <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">{t('services.titleHighlight')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We offer comprehensive digital solutions to help your business thrive in the digital landscape.
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -52,7 +55,7 @@ const Services = () => {
             const IconComponent = service.icon;
             return (
               <Card 
-                key={service.title} 
+                key={service.titleKey} 
                 className="shadow-card hover-lift transition-smooth border-0 bg-card/50 backdrop-blur-sm animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -60,8 +63,8 @@ const Services = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-primary mb-6">
                     <IconComponent className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-4">{t(service.titleKey)}</h3>
+                  <p className="text-muted-foreground">{t(service.descKey)}</p>
                 </CardContent>
               </Card>
             );
