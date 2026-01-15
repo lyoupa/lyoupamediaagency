@@ -24,7 +24,7 @@ const Contact = () => {
             <CardContent className="p-6 text-center">
               <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
               <h4 className="font-semibold mb-2">{t('contact.emailUs')}</h4>
-              <p className="text-muted-foreground">contact@lyoupamedia.com</p>
+              <p className="text-muted-foreground">lyoupamedia@gmail.com</p>
               <Button variant="outline" className="mt-4 w-full">
                 {t('contact.sendEmail')}
               </Button>
