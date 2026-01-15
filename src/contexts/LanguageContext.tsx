@@ -298,7 +298,6 @@ const translations: Record<Language, any> = {
       whatsappMessage: "مرحباً! أود البدء في خدماتكم."
     },
     services: {
-      title: "",
       titleHighlight: "خدماتنا",
       subtitle: "نقدم حلولاً رقمية شاملة لمساعدة عملك على الازدهار في المشهد الرقمي.",
       webDesign: "تصميم المواقع",
@@ -315,7 +314,6 @@ const translations: Record<Language, any> = {
       digitalMarketingDesc: "استراتيجيات تسويق قائمة على البيانات لتعزيز حضورك عبر الإنترنت."
     },
     portfolio: {
-      title: "",
       titleHighlight: "أعمالنا",
       subtitle: "استكشف أحدث مشاريعنا وشاهد كيف ساعدنا الشركات على تحقيق أهدافها الرقمية.",
       viewProject: "عرض المشروع",
