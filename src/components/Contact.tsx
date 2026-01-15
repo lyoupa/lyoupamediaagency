@@ -35,7 +35,7 @@ const Contact = () => {
             <CardContent className="p-6 text-center">
               <MessageCircle className="h-12 w-12 text-primary mx-auto mb-4" />
               <h4 className="font-semibold mb-2">{t('contact.whatsapp')}</h4>
-              <p className="text-muted-foreground">+1 (555) 123-4567</p>
+              <p className="text-muted-foreground">+34 666 003 838</p>
               <Button variant="outline" className="mt-4 w-full">
                 {t('contact.chatWhatsapp')}
               </Button>
