@@ -166,6 +166,14 @@ const translations: Record<Language, any> = {
       whatsapp: "WhatsApp",
       chatWhatsapp: "Chatear por WhatsApp",
       followUs: "Síguenos"
+    },
+    footer: {
+      description: "Transformamos ideas en realidad digital. Tu socio de confianza para soluciones web innovadoras.",
+      quickLinks: "Enlaces Rápidos",
+      followUs: "Síguenos",
+      rights: "Todos los derechos reservados.",
+      privacy: "Política de Privacidad",
+      terms: "Términos de Servicio"
     }
   },
   en: {
@@ -274,6 +282,14 @@ const translations: Record<Language, any> = {
       whatsapp: "WhatsApp",
       chatWhatsapp: "Chat on WhatsApp",
       followUs: "Follow Us"
+    },
+    footer: {
+      description: "We transform ideas into digital reality. Your trusted partner for innovative web solutions.",
+      quickLinks: "Quick Links",
+      followUs: "Follow Us",
+      rights: "All rights reserved.",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service"
     }
   },
   ar: {
@@ -380,6 +396,14 @@ const translations: Record<Language, any> = {
       whatsapp: "واتساب",
       chatWhatsapp: "تحدث عبر واتساب",
       followUs: "تابعنا"
+    },
+    footer: {
+      description: "نحوّل الأفكار إلى واقع رقمي. شريكك الموثوق للحلول الرقمية المبتكرة.",
+      quickLinks: "روابط سريعة",
+      followUs: "تابعنا",
+      rights: "جميع الحقوق محفوظة.",
+      privacy: "سياسة الخصوصية",
+      terms: "شروط الخدمة"
     }
   }
 };
