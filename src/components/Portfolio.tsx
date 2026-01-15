@@ -58,7 +58,7 @@ const Portfolio = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            {t('portfolio.title')} <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">{t('portfolio.titleHighlight')}</span>
+            {t('portfolio.title') && <>{t('portfolio.title')} </>}<span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">{t('portfolio.titleHighlight')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('portfolio.subtitle')}
