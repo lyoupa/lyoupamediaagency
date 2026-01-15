@@ -38,7 +38,7 @@ const Hero = () => {
               size="lg" 
               variant="secondary" 
               className="min-w-[200px]"
-              onClick={() => window.open(`https://wa.me/1234567890?text=${encodeURIComponent(t('hero.whatsappMessage'))}`, '_blank')}
+              onClick={() => window.open(`https://wa.me/34666003838?text=${encodeURIComponent(t('hero.whatsappMessage'))}`, '_blank')}
             >
               {t('hero.getStarted')}
               <ArrowRight className={`h-5 w-5 ${isRTL ? 'mr-2 rotate-180' : 'ml-2'}`} />
