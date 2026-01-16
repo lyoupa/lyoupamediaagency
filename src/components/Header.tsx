@@ -28,7 +28,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex gap-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
