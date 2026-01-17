@@ -25,7 +25,11 @@ const Contact = () => {
               <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
               <h4 className="font-semibold mb-2">{t('contact.emailUs')}</h4>
               <p className="text-muted-foreground">lyoupamedia@gmail.com</p>
-              <Button variant="outline" className="mt-4 w-full">
+              <Button 
+                variant="outline" 
+                className="mt-4 w-full"
+                onClick={() => window.open('mailto:lyoupamedia@gmail.com', '_blank')}
+              >
                 {t('contact.sendEmail')}
               </Button>
             </CardContent>
@@ -36,7 +40,11 @@ const Contact = () => {
               <MessageCircle className="h-12 w-12 text-primary mx-auto mb-4" />
               <h4 className="font-semibold mb-2">{t('contact.whatsapp')}</h4>
               <p className="text-muted-foreground">+34 666 003 838</p>
-              <Button variant="outline" className="mt-4 w-full">
+              <Button 
+                variant="outline" 
+                className="mt-4 w-full"
+                onClick={() => window.open('https://wa.me/34666003838?text=Hi! I would like to get in touch.', '_blank')}
+              >
                 {t('contact.chatWhatsapp')}
               </Button>
             </CardContent>
