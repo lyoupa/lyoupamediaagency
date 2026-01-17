@@ -42,9 +42,6 @@ const Header = () => {
 
           <div className="hidden md:flex items-center gap-2">
             <LanguageSwitcher />
-            <Button variant="default" size="sm">
-              {t('nav.getStarted')}
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -74,11 +71,6 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="px-3 py-2">
-                <Button variant="default" size="sm" className="w-full">
-                  {t('nav.getStarted')}
-                </Button>
-              </div>
             </div>
           </div>
         )}
