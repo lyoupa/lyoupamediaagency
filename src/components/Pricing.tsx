@@ -78,7 +78,11 @@ const Pricing = () => {
                     <span>{t(featureKey)}</span>
                   </div>
                 ))}
-                <Button className="w-full mt-6" variant={pkg.popular ? "default" : "outline"}>
+                <Button 
+                  className="w-full mt-6" 
+                  variant={pkg.popular ? "default" : "outline"}
+                  onClick={() => window.open(`https://wa.me/34666003838?text=${encodeURIComponent(`Hi! I'm interested in the ${t(pkg.nameKey)} package.`)}`, '_blank')}
+                >
                   {t('pricing.getStarted')}
                 </Button>
               </CardContent>
